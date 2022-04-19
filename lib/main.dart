@@ -18,24 +18,65 @@ class IfoodFlutter extends StatelessWidget {
         backgroundColor: Colors.white,
         body: ListView(
           children: <Widget>[
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
-                padding: const EdgeInsets.symmetric(
-              horizontal: 12,
+              padding: const EdgeInsets.symmetric(
+                horizontal: 12,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  const Text(
+                    'ENTREGAR EM',
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16),
+                  ),
+                  Row(
+                    children: const <Widget>[
+                      Text(
+                        'Rua, A 71',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                      Icon(
+                        Icons.keyboard_arrow_down,
+                        color: Colors.red,
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
-            child:Column(
-              children: <Widget>[
-                Text('ENTREGAR EM'),
-                Row(
-                  children: <Widget>[
-                    Text('Rua, A 71'),
-                    Icon(Icons.keyboard_arrow_down),
-                  ],
-                )
-              ],
+            const SizedBox(
+              height: 10,
             ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 14),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.grey.shade100),
+                      child: TextField(
+                        decoration: InputDecoration(
+                         hintText: 'Prato ou Restaurante',
+                          border: InputBorder.none,
+                          prefixIcon:
+                            Icon(Icons.search,
+                            color:
+                              Colors.red,)
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),
