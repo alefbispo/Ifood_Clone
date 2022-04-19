@@ -1,19 +1,44 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const IfoodFlutter());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class IfoodFlutter extends StatelessWidget {
+  const IfoodFlutter({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Ifood',
       theme: ThemeData(
-
+        primarySwatch: Colors.grey,
+      ),
+      title: 'Ifood Flutter',
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        body: ListView(
+          children: <Widget>[
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+                padding: const EdgeInsets.symmetric(
+              horizontal: 12,
+            ),
+            child:Column(
+              children: <Widget>[
+                Text('ENTREGAR EM'),
+                Row(
+                  children: <Widget>[
+                    Text('Rua, A 71'),
+                    Icon(Icons.keyboard_arrow_down),
+                  ],
+                )
+              ],
+            ),
+            )
+          ],
+        ),
       ),
     );
   }
