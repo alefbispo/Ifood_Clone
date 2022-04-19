@@ -86,29 +86,84 @@ class IfoodFlutter extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Container(
-              height: 180,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
+            Padding(
+              padding: const EdgeInsets.only(left: 12),
+              child: Container(
+                height: 180,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: ListView(
+                  padding: EdgeInsets.only(right: 12),
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(8),
+                          child: Image.asset(
+                            'assets/images/restaurantes-0.png',
+                            height: 140,
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        const Text(
+                          'Confira sua entrega grátis na sacola',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black54),
+                        )
+                      ],
+                    ),
+                    const SizedBox(width: 10),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(8),
+                          child: Image.asset(
+                            'assets/images/restaurantes-1.png',
+                            height: 140,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Text(
+                          'A taxa é cortesia pra você',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black54),
+                        )
+                      ],
+                    ),const SizedBox(width: 10),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(8),
+                          child: Image.asset(
+                            'assets/images/restaurantes-2.png',
+                            height: 140,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Text(
+                          'Comida gostosa e sem taxas',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black54),
+                        )
+                      ],
+                    )
+                  ],
+                ),
               ),
-              child: ListView(
-                padding: EdgeInsets.only(right: 12),
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                       child: Image.asset('assets/images/restaurantes-0.png',
-                         height: 140,
-                       ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            )
+            ),
+
           ],
         ),
       ),
