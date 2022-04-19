@@ -63,17 +63,48 @@ class IfoodFlutter extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                           color: Colors.grey.shade100),
-                      child: TextField(
+                      child: const TextField(
                         decoration: InputDecoration(
-                         hintText: 'Prato ou Restaurante',
-                          border: InputBorder.none,
-                          prefixIcon:
-                            Icon(Icons.search,
-                            color:
-                              Colors.red,)
-                        ),
+                            hintText: 'Prato ou Restaurante',
+                            border: InputBorder.none,
+                            prefixIcon: Icon(
+                              Icons.search,
+                              color: Colors.red,
+                            )),
                       ),
                     ),
+                  ),
+                  SizedBox(
+                    width: 14,
+                  ),
+                  const Text(
+                    'Filtros',
+                    style: TextStyle(
+                        color: Colors.red, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            Container(
+              height: 180,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: ListView(
+                padding: EdgeInsets.only(right: 12),
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                       child: Image.asset('assets/images/restaurantes-0.png',
+                         height: 140,
+                       ),
+                      )
+                    ],
                   )
                 ],
               ),
