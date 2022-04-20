@@ -132,8 +132,7 @@ class IfoodFlutter extends StatelessWidget {
                       children: <Widget>[
                         columnCategorias('assets/images/pizza.png', 'Pizzas'),
                         const SizedBox(width: 5),
-                        columnCategorias(
-                            'assets/images/lanches.png', 'Lanches'),
+                        columnCategorias('assets/images/lanches.png', 'Lanches'),
                         const SizedBox(width: 5),
                         columnCategorias('assets/images/acai.png', 'Açai'),
                         const SizedBox(width: 5),
@@ -160,38 +159,24 @@ class IfoodFlutter extends StatelessWidget {
         ),
         bottomNavigationBar: BottomNavigationBar(
           elevation: 4,
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-                color: Colors.black,
-              ),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.search,
-                color: Colors.black,
-              ),
-              label: 'Buscas',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.receipt,
-                color: Colors.black,
-              ),
-              label: 'Pedidos',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.person_outline,
-                color: Colors.black,
-              ),
-              label: 'Perfil',
-            )
+          items: [
+            bottomNavigationBar(Icons.home, 'Home'),
+            bottomNavigationBar(Icons.search, 'Buscas'),
+            bottomNavigationBar(Icons.receipt, 'pedido'),
+            bottomNavigationBar(Icons.person_outline, 'Perfil'),
           ],
         ),
       ),
+    );
+  }
+
+  BottomNavigationBarItem bottomNavigationBar(icone, texto) {
+    return BottomNavigationBarItem(
+      icon: Icon(
+        icone,
+        color: Colors.black,
+      ),
+      label: texto,
     );
   }
 }
@@ -218,7 +203,8 @@ class columnCategorias extends StatelessWidget {
         const SizedBox(height: 7),
         Text(
           texto,
-          style: const TextStyle(fontWeight: FontWeight.w500, color: Colors.black54),
+          style: const TextStyle(
+              fontWeight: FontWeight.w500, color: Colors.black54),
         )
       ],
     );
@@ -246,7 +232,8 @@ class columnBanner extends StatelessWidget {
         const SizedBox(height: 10),
         Text(
           texto,
-          style: const TextStyle(fontWeight: FontWeight.w500, color: Colors.black54),
+          style: const TextStyle(
+              fontWeight: FontWeight.w500, color: Colors.black54),
         )
       ],
     );
