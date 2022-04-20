@@ -1,6 +1,7 @@
 # ifood
 
 Interface do aplicativo Ifood feita com Flutter.
+Aplicando conhecimentos e praticando.
 
 ## Getting Started
 
