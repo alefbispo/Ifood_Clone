@@ -38,7 +38,7 @@ class IfoodFlutter extends StatelessWidget {
                   Row(
                     children: const <Widget>[
                       Text(
-                        'Rua, A 71',
+                        'Avenida Euclides, 71',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 16),
                       ),
@@ -191,7 +191,7 @@ class IfoodFlutter extends StatelessWidget {
                               borderRadius: BorderRadius.circular(4),
                               child: Image.asset(
                                 'assets/images/pizza.png',
-                                height: 70,
+                                height: 75,
                               ),
                             ),
                             SizedBox(height: 7),
@@ -211,7 +211,7 @@ class IfoodFlutter extends StatelessWidget {
                               borderRadius: BorderRadius.circular(4),
                               child: Image.asset(
                                 'assets/images/lanches.png',
-                                height: 70,
+                                height: 75,
                               ),
                             ),
                             SizedBox(height: 7),
@@ -229,7 +229,7 @@ class IfoodFlutter extends StatelessWidget {
                               borderRadius: BorderRadius.circular(4),
                               child: Image.asset(
                                 'assets/images/acai.png',
-                                height: 70,
+                                height: 75,
                               ),
                             ),
                             SizedBox(height: 7),
@@ -247,7 +247,7 @@ class IfoodFlutter extends StatelessWidget {
                               borderRadius: BorderRadius.circular(4),
                               child: Image.asset(
                                 'assets/images/japonesa.png',
-                                height: 70,
+                                height: 75,
                               ),
                             ),
                             SizedBox(height: 7),
