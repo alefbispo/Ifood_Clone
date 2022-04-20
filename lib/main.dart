@@ -267,6 +267,46 @@ class IfoodFlutter extends StatelessWidget {
               height: 10,
               color: Colors.grey.shade100,
             ),
+            Container(
+              padding: EdgeInsets.all(12),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: Image.asset('assets/images/gourmet.png'),
+              ),
+            ),
+          ],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          elevation: 4,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                color: Colors.black,
+              ),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.search,
+                color: Colors.black,
+              ),
+              label: 'Buscas',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.receipt,
+                color: Colors.black,
+              ),
+              label: 'Pedidos',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person_outline,
+                color: Colors.black,
+              ),
+              label: 'Perfil',
+            )
           ],
         ),
       ),
