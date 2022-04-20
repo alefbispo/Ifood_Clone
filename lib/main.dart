@@ -97,69 +97,15 @@ class IfoodFlutter extends StatelessWidget {
                   padding: EdgeInsets.only(right: 12),
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            'assets/images/restaurantes-0.png',
-                            height: 140,
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        const Text(
-                          ' Confira sua entrega grátis na sacola',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black54),
-                        )
-                      ],
-                    ),
+                    columnBanner('assets/images/restaurantes-0.png',
+                        'Confira sua entrega grátis na sacola'),
                     const SizedBox(width: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            'assets/images/restaurantes-1.png',
-                            height: 140,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          ' A taxa é cortesia pra você',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black54),
-                        )
-                      ],
-                    ),
+                    columnBanner('assets/images/restaurantes-1.png',
+                        'A taxa é cortesia pra você'),
                     const SizedBox(width: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            'assets/images/restaurantes-2.png',
-                            height: 140,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          ' Comida gostosa e sem taxas',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black54),
-                        )
-                      ],
-                    )
+                    columnBanner('assets/images/restaurantes-2.png',
+                        'Comida gostosa e sem taxas'),
+                    const SizedBox(width: 10),
                   ],
                 ),
               ),
@@ -184,79 +130,15 @@ class IfoodFlutter extends StatelessWidget {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(4),
-                              child: Image.asset(
-                                'assets/images/pizza.png',
-                                height: 75,
-                              ),
-                            ),
-                            SizedBox(height: 7),
-                            const Text(
-                              'Pizzas',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black54),
-                            )
-                          ],
-                        ),
+                        columnCategorias('assets/images/pizza.png', 'Pizzas'),
                         const SizedBox(width: 5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(4),
-                              child: Image.asset(
-                                'assets/images/lanches.png',
-                                height: 75,
-                              ),
-                            ),
-                            SizedBox(height: 7),
-                            const Text('Lanches',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.black54))
-                          ],
-                        ),
+                        columnCategorias(
+                            'assets/images/lanches.png', 'Lanches'),
                         const SizedBox(width: 5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(4),
-                              child: Image.asset(
-                                'assets/images/acai.png',
-                                height: 75,
-                              ),
-                            ),
-                            SizedBox(height: 7),
-                            const Text('Açai',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.black54))
-                          ],
-                        ),
+                        columnCategorias('assets/images/acai.png', 'Açai'),
                         const SizedBox(width: 5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(4),
-                              child: Image.asset(
-                                'assets/images/japonesa.png',
-                                height: 75,
-                              ),
-                            ),
-                            SizedBox(height: 7),
-                            const Text('Japonesa',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.black54))
-                          ],
-                        )
+                        columnCategorias(
+                            'assets/images/japonesa.png', 'Japonesa'),
                       ],
                     ),
                   ),
@@ -310,6 +192,63 @@ class IfoodFlutter extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class columnCategorias extends StatelessWidget {
+  final imagem;
+
+  final texto;
+
+  columnCategorias(this.imagem, this.texto);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        ClipRRect(
+          borderRadius: BorderRadius.circular(4),
+          child: Image.asset(
+            imagem,
+            height: 75,
+          ),
+        ),
+        const SizedBox(height: 7),
+        Text(
+          texto,
+          style: const TextStyle(fontWeight: FontWeight.w500, color: Colors.black54),
+        )
+      ],
+    );
+  }
+}
+
+class columnBanner extends StatelessWidget {
+  final imagem;
+  final texto;
+
+  columnBanner(this.imagem, this.texto);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+          child: Image.asset(
+            imagem,
+            height: 140,
+          ),
+        ),
+        const SizedBox(height: 10),
+        Text(
+          texto,
+          style: const TextStyle(fontWeight: FontWeight.w500, color: Colors.black54),
+        )
+      ],
     );
   }
 }
