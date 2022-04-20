@@ -109,7 +109,7 @@ class IfoodFlutter extends StatelessWidget {
                         ),
                         const SizedBox(height: 10),
                         const Text(
-                          'Confira sua entrega grátis na sacola',
+                          ' Confira sua entrega grátis na sacola',
                           style: TextStyle(
                               fontWeight: FontWeight.w500,
                               color: Colors.black54),
@@ -131,13 +131,14 @@ class IfoodFlutter extends StatelessWidget {
                           height: 10,
                         ),
                         const Text(
-                          'A taxa é cortesia pra você',
+                          ' A taxa é cortesia pra você',
                           style: TextStyle(
                               fontWeight: FontWeight.w500,
                               color: Colors.black54),
                         )
                       ],
-                    ),const SizedBox(width: 10),
+                    ),
+                    const SizedBox(width: 10),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -152,7 +153,7 @@ class IfoodFlutter extends StatelessWidget {
                           height: 10,
                         ),
                         const Text(
-                          'Comida gostosa e sem taxas',
+                          ' Comida gostosa e sem taxas',
                           style: TextStyle(
                               fontWeight: FontWeight.w500,
                               color: Colors.black54),
@@ -163,7 +164,109 @@ class IfoodFlutter extends StatelessWidget {
                 ),
               ),
             ),
-
+            Container(
+              height: 10,
+              color: Colors.grey.shade100,
+            ),
+            Container(
+              height: 150,
+              padding: EdgeInsets.only(top: 12, left: 12),
+              alignment: Alignment.topLeft,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  const Text(
+                    'Categorias',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                  ),
+                  SizedBox(height: 5),
+                  Expanded(
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(4),
+                              child: Image.asset(
+                                'assets/images/pizza.png',
+                                height: 70,
+                              ),
+                            ),
+                            SizedBox(height: 7),
+                            const Text(
+                              'Pizzas',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black54),
+                            )
+                          ],
+                        ),
+                        const SizedBox(width: 5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(4),
+                              child: Image.asset(
+                                'assets/images/lanches.png',
+                                height: 70,
+                              ),
+                            ),
+                            SizedBox(height: 7),
+                            const Text('Lanches',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black54))
+                          ],
+                        ),
+                        const SizedBox(width: 5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(4),
+                              child: Image.asset(
+                                'assets/images/acai.png',
+                                height: 70,
+                              ),
+                            ),
+                            SizedBox(height: 7),
+                            const Text('Açai',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black54))
+                          ],
+                        ),
+                        const SizedBox(width: 5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(4),
+                              child: Image.asset(
+                                'assets/images/japonesa.png',
+                                height: 70,
+                              ),
+                            ),
+                            SizedBox(height: 7),
+                            const Text('Japonesa',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black54))
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              height: 10,
+              color: Colors.grey.shade100,
+            ),
           ],
         ),
       ),
